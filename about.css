@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
 
 body {
     font-family: 'Tahoma', sans-serif;
@@ -5,6 +6,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.8;
+    font-family: 'Vazirmatn', sans-serif;
 }
 header {
     background-color: #13646d;

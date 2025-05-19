@@ -1,102 +1,101 @@
 <!DOCTYPE html>
-<html lang="fa">
-
+<html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>فروشگاه کفش و کیف</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>فروشگاه کفش و کیف آکام</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
-
 <body>
-    <header>
-        <h1>فروشگاه کفش و کیف</h1>
-        <a class="login-a" href="about-us.html">
-            درباره ما
-        </a>
-        <a class="login-a" href="./login.html" target="_blank">
-            ورود
-        </a>
-    </header>
-    
-    <div class="menu">
-        <a href="#">کیف</a>
-        <a href="#">کفش</a>
-        <a href="#">لباس ورزشی</a>
-        <a href="#">وسایل ورزشی</a>
+  <header>
+    <h1>فروشگاه کفش و کیف</h1>
+    <nav>
+      <a class="login-a" href="about-us.html">درباره ما</a>
+      <a class="login-a" href="./login.html" target="_blank">ورود</a>
+      <div id="cart-icon" onclick="toggleCart()">🛒 <span id="cart-count">۰</span></div>
+    </nav>
+  </header>
+
+  <div class="menu">
+    <a href="#">کیف</a>
+    <a href="#">کفش</a>
+    <a href="#">لباس ورزشی</a>
+    <a href="#">وسایل ورزشی</a>
+  </div>
+
+  <section class="section">
+    <h2>معرفی محصولات</h2>
+    <p>ما مجموعه‌ای از بهترین کیف‌ها و کفش‌ها را با کیفیت بالا و قیمت مناسب ارائه می‌دهیم.</p>
+  </section>
+
+  <section class="section product-container" id="products">
+    <h2>خرید محصولات</h2>
+
+    <!-- محصولات -->
+    <div class="product" data-name="کفش مردانه" data-price="500000">
+      <img src="./img/1.jpg" alt="کفش مردانه" />
+      <h3>کفش مردانه</h3>
+      <p>قیمت: ۵۰۰٬۰۰۰ تومان</p>
+      <button class="buy-button">افزودن به سبد</button>
     </div>
-    <section class="section">
-        <h2>معرفی محصولات</h2>
-        <p>ما مجموعه‌ای از بهترین کیف‌ها و کفش‌ها را با کیفیت بالا و قیمت مناسب ارائه می‌دهیم.</p>
-    </section>
 
-    <section class="section" id="products">
-        <h2>خرید محصولات</h2>
-        <div class="product">
-            <img src="/img/R.jpg" alt="کفش مردانه">
-            <h3>کفش مردانه</h3>
-            <p>قیمت: 500,000 تومان</p>
-            <button class="buy-button" onclick="buyProduct('کفش مردانه')">خرید</button>
-        </div>
+    <div class="product" data-name="کفش زنانه" data-price="350000">
+      <img src="./img/3.jpg" alt="کفش زنانه" />
+      <h3>کفش زنانه</h3>
+      <p>قیمت: ۳۵۰٬۰۰۰ تومان</p>
+      <button class="buy-button">افزودن به سبد</button>
+    </div>
 
-        <div class="product">
-            <img src="./img/R (1).jpg" alt="کیف زنانه">
-            <h3>کیف زنانه</h3>
-            <p>قیمت: 350,000 تومان</p>
-            <button class="buy-button" onclick="buyProduct('کیف زنانه')">خرید</button>
-        </div>
+    <div class="product" data-name="کفش ورزشی" data-price="420000">
+      <img src="./img/4.jpg" alt="کفش ورزشی" />
+      <h3>کفش ورزشی</h3>
+      <p>قیمت: ۴۲۰٬۰۰۰ تومان</p>
+      <button class="buy-button">افزودن به سبد</button>
+    </div>
 
-        <div class="product">
-            <img src="./img/R (2).jpg" alt="کفش ورزشی">
-            <h3>کفش ورزشی</h3>
-            <p>قیمت: 420,000 تومان</p>
-            <button class="buy-button" onclick="buyProduct('کفش ورزشی')">خرید</button>
-        </div>
-        <div class="product">
-            <img src="/img/مدل-کفش-مردانه-نیمه-اسپرت-رنگ-قهوه-ای-مدل-نیومن-سی-سی.jpg" alt="کفش مردانه">
-            <h3>کفش مردانه</h3>
-            <p>قیمت: 500,000 تومان</p>
-            <button class="buy-button" onclick="buyProduct('کفش مردانه')">خرید</button>
-        </div>
+    <div class="product" data-name="کیف زنانه" data-price="350000">
+      <img src="./img/Untitled.jpg" alt="کیف زنانه" />
+      <h3>کیف زنانه</h3>
+      <p>قیمت: ۳۵۰٬۰۰۰ تومان</p>
+      <button class="buy-button">افزودن به سبد</button>
+    </div>
+  </section>
 
-        <div class="product">
-            <img src="./img/R (3).jpg" alt="کیف زنانه">
-            <h3>کیف زنانه</h3>
-            <p>قیمت: 350,000 تومان</p>
-            <button class="buy-button" onclick="buyProduct('کیف زنانه')">خرید</button>
-        </div>
-
-    </section>
-
-    <footer>
+  <!-- سبد خرید -->
+  <div id="cart">
+    <h3>🛒 سبد خرید</h3>
+    <ul id="cart-items"></ul>
+    <p id="cart-total">جمع کل: ۰ تومان</p>
+    <button id="clear-cart" onclick="clearCart()">حذف همه</button>
+  </div>
+  <footer>
+    <div class="footer-col">
+        <h4>تماس با ما</h4>
         <ul>
-            <li>
-                <p class="address">
-                    آدرس : مهاباد ، خیابان حافظ ، روبروی زستوران گلشن ، کیف و کفش آکام
-                </p>
-            </li>
-            <li>
-                <p class="detail-footer">
-                    برای اطلاع از قیمت های بروز تماس حاصل فرمایید
-                </p>
-            </li>
-            <li>
-                <p class="phone-number">
-                    شماره تلفن: 09332478625
-                </p>
-            </li>
+            <li class="address">مهاباد، خیابان حافظ، روبروی رستوران گلشن</li>
+            <li class="phone-number">تلفن: 09332478625</li>
+            <li class="detail-footer">برای اطلاع از قیمت‌های بروز تماس بگیرید</li>
         </ul>
-        <p>
-            <img src="" alt="">
-            تمامی حقوق محفوظ است <br> &copy; 2025
-        </p>
+    </div>
 
-    </footer>
-    <script>
-        function buyProduct(productName) {
-            alert('شما ' + productName + ' را به سبد خرید اضافه کردید.');
-        }
-    </script>
+    <div class="footer-col">
+        <h4>درباره فروشگاه</h4>
+        <p>فروشگاه آکام ارائه‌دهنده بهترین کیف و کفش‌های با کیفیت و قیمت مناسب در سطح منطقه.</p>
+    </div>
+
+    <div class="footer-col">
+        <h4>دنبال کنید</h4>
+        <ul>
+            <li><a href="#" style="color:#f1c40f;">اینستاگرام</a></li>
+            <li><a href="#" style="color:#f1c40f;">تلگرام</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-bottom">
+        <p>تمامی حقوق محفوظ است &copy; 2025 | فروشگاه آکام</p>
+    </div>
+</footer>
+
 </body>
-
 </html>
